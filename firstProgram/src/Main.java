@@ -1,3 +1,5 @@
+import br.com.firstProgramacao.movie.model.Movie;
+
 public class Main {
     public static void main(String[] args) {
         // Reference type
