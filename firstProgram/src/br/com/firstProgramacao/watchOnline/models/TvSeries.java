@@ -1,6 +1,6 @@
-package br.com.firstProgramacao.movie.model;
+package br.com.firstProgramacao.watchOnline.models;
 
-public class TvSeries extends Title{
+public class TvSeries extends Title {
     private int season;
     private int episodeSeason;
     private int episodeMinutes;

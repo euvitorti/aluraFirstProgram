@@ -1,6 +1,8 @@
-package br.com.firstProgramacao.movie.model;
+package br.com.firstProgramacao.watchOnline.models;
 
-public class Movie extends Title{
+import br.com.firstProgramacao.watchOnline.models.Title;
+
+public class Movie extends Title {
     private String director;
 
     public String getDirector() {

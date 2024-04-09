@@ -1,9 +1,9 @@
-package br.com.firstProgramacao.movie.model;
+package br.com.firstProgramacao.watchOnline.models;
 
 public class Title {
     public String name;
     public int debutYear;
-    public int durationMovie;
+    public int duration;
     private int totalEvaluations;
     private double sumOfAssessment;
     private double mediaAssessment;
@@ -51,7 +51,11 @@ public class Title {
     }
 
     public int getDuration() {
-        return durationMovie;
+        return this.duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
     }
 
     public int getTotalEvaluations() {
