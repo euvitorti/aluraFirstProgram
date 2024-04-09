@@ -37,4 +37,9 @@ public class TvSeries extends Title{
     public void setActive(boolean active) {
         this.active = active;
     }
+
+    @Override
+    public int getDuration(){
+        return season * episodeSeason * episodeMinutes;
+    }
 }

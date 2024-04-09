@@ -41,4 +41,20 @@ public class Title {
     public void setDebutYear(int debutYear) {
         this.debutYear = debutYear;
     }
+
+    public boolean isIncludedInThePlan() {
+        return includedInThePlan;
+    }
+
+    public void setIncludedInThePlan(boolean includedInThePlan) {
+        this.includedInThePlan = includedInThePlan;
+    }
+
+    public int getDuration() {
+        return durationMovie;
+    }
+
+    public int getTotalEvaluations() {
+        return totalEvaluations;
+    }
 }
