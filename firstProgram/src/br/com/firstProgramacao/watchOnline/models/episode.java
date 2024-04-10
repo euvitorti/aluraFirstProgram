@@ -1,9 +1,12 @@
 package br.com.firstProgramacao.watchOnline.models;
 
-public class episode {
+import br.com.firstProgramacao.watchOnline.classification.Classification;
+
+public class Episode implements Classification {
     private int number;
     private String name;
     private TvSeries series;
+    private int totalView;
 
     public int getNumber() {
         return number;
@@ -27,5 +30,21 @@ public class episode {
 
     public void setSeries(TvSeries series) {
         this.series = series;
+    }
+
+    @Override
+    public int getClassification() {
+        if (totalView > 100) {
+            return 5;
+        } else {
+            return 3;
+        }
+    }
+    public int getTotalView() {
+        return totalView;
+    }
+
+    public void setTotalView(int totalView) {
+        this.totalView = totalView;
     }
 }

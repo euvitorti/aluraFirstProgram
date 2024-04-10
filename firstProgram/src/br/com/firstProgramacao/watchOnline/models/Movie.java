@@ -1,9 +1,8 @@
 package br.com.firstProgramacao.watchOnline.models;
 
-import br.com.firstProgramacao.watchOnline.classification.classification;
-import br.com.firstProgramacao.watchOnline.models.Title;
+import br.com.firstProgramacao.watchOnline.classification.Classification;
 
-public class Movie extends Title implements classification {
+public class Movie extends Title implements Classification {
     private String director;
 
     public String getDirector() {
@@ -16,6 +15,6 @@ public class Movie extends Title implements classification {
 
     @Override
     public int getClassification() {
-        return 0;
+        return getTotalEvaluations() / 2;
     }
 }
