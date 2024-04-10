@@ -10,7 +10,7 @@ public class Title {
     boolean includedInThePlan;
 
     public void showMovieInfo(){
-        System.out.printf("br.com.firstProgramacao.movie.model.Movie name: %s.\n", this.name);
+        System.out.printf("Movie name: %s.\n", this.name);
         System.out.printf("Debut year: %d.\n", this.debutYear);
         System.out.printf("Media evaluation: %.1f.\n", this.mediaAssessment);
         System.out.printf("Total evaluations: %d.\n", this.totalEvaluations);
