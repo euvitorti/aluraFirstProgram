@@ -6,7 +6,7 @@ public class TvSeries extends Title {
     private int episodeMinutes;
     private boolean active;
 
-    // CONSTRUTOR NÃO É HERDADO, LOGO TEM QUE FAZER UM QUE É CORRESPODENTE A CLASSE PRINCIPAL
+    // CONSTRUTOR NÃO É HERDADO, LOGO TEM QUE FAZER UM QUE É CORRESPONDENTE A CLASSE PRINCIPAL
     public TvSeries(String name, int debutYear) {
         super(name, debutYear);
     }
