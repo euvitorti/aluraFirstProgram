@@ -1,3 +1,5 @@
+package br.com.firstProgramacao.watchOnline.main;
+
 import br.com.firstProgramacao.watchOnline.models.Movie;
 import br.com.firstProgramacao.watchOnline.models.TvSeries;
 
