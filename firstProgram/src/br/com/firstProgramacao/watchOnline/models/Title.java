@@ -9,6 +9,12 @@ public class Title {
     private double mediaAssessment;
     boolean includedInThePlan;
 
+    // ESSE CONSTRUTOR É CHAMADO NAS CLASSES FILHAS
+    public Title(String name, int debutYear) {
+        this.name = name;
+        this.debutYear = debutYear;
+    }
+
     public void showMovieInfo(){
         System.out.printf("Movie name: %s.\n", this.name);
         System.out.printf("Debut year: %d.\n", this.debutYear);

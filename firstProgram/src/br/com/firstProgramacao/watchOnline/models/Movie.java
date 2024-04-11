@@ -5,6 +5,11 @@ import br.com.firstProgramacao.watchOnline.classification.Classification;
 public class Movie extends Title implements Classification {
     private String director;
 
+    // CONSTRUTOR NÃO É HERDADO, LOGO TEM QUE FAZER UM QUE É CORRESPODENTE A CLASSE PRINCIPAL
+    public Movie(String name, int debutYear) {
+        super(name, debutYear);
+    }
+
     public String getDirector() {
         return director;
     }
