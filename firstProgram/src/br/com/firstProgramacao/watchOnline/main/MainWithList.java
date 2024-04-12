@@ -5,6 +5,7 @@ import br.com.firstProgramacao.watchOnline.models.Title;
 import br.com.firstProgramacao.watchOnline.models.TvSeries;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MainWithList {
     public static void main(String[] args) {
@@ -39,6 +40,17 @@ public class MainWithList {
             }
 //            Movie movieTwo = (Movie) title;
         }
-        
+
+        //ORDENAÇÃO
+        ArrayList<String> findArtists = new ArrayList<>();
+        findArtists.add("Optimus Prime");
+        findArtists.add("Bumblebee");
+        findArtists.add("Mirage");
+        System.out.println(findArtists);
+
+//        Collections.sort(findArtists);
+//        System.out.println(findArtists);
+        Collections.sort(listPrograms);
+        System.out.println(listPrograms);
     }
 }

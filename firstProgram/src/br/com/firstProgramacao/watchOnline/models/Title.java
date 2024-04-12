@@ -1,6 +1,6 @@
 package br.com.firstProgramacao.watchOnline.models;
 
-public class Title {
+public class Title implements  Comparable<Title>{
     public String name;
     public int debutYear;
     public int duration;
@@ -66,5 +66,11 @@ public class Title {
 
     public int getTotalEvaluations() {
         return totalEvaluations;
+    }
+
+    // METÓDO PARA COMPARAÇÃO
+    @Override
+    public int compareTo(Title sort) {
+        return this.getName().compareTo(sort.getName());
     }
 }

@@ -47,4 +47,8 @@ public class TvSeries extends Title {
     public int getDuration(){
         return season * episodeSeason * episodeMinutes;
     }
+
+    public String toString(){
+        return "Serie: " + this.getName();
+    }
 }
