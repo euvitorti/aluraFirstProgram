@@ -50,6 +50,9 @@ public class MainWithList {
 
 //        Collections.sort(findArtists);
 //        System.out.println(findArtists);
+        listPrograms.add(movieInfo);
+        listPrograms.add(movie);
+        listPrograms.add(series);
         Collections.sort(listPrograms);
         System.out.println(listPrograms);
     }

@@ -1,6 +1,6 @@
 package br.com.firstProgramacao.watchOnline.models;
 
-public class Title implements  Comparable<Title>{
+public class Title implements Comparable<Title>{
     public String name;
     public int debutYear;
     public int duration;
