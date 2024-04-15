@@ -1,7 +1,11 @@
 package br.com.firstProgramacao.watchOnline.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Title implements Comparable<Title>{
+    @SerializedName("Title")
     public String name;
+    @SerializedName("Year")
     public int debutYear;
     public int duration;
     private int totalEvaluations;
@@ -72,5 +76,11 @@ public class Title implements Comparable<Title>{
     @Override
     public int compareTo(Title sort) {
         return this.getName().compareTo(sort.getName());
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + '\n' +
+                "Year: " + debutYear;
     }
 }

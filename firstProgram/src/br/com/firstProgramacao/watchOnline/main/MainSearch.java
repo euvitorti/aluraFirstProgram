@@ -1,5 +1,8 @@
 package br.com.firstProgramacao.watchOnline.main;
 
+import br.com.firstProgramacao.watchOnline.models.Title;
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpRequest;
@@ -15,7 +18,7 @@ public class MainSearch {
         System.out.println("Movie or series name: ");
         String search = scanner.nextLine();
 
-        String address = "https://www.omdbapi.com/?t=" + search + "&apikey=YourKey";
+        String address = "https://www.omdbapi.com/?t=" + search + "&apikey=cea70f0f";
 
         // Para fazer a requisição (GET)
         HttpClient client = HttpClient.newHttpClient();
@@ -27,7 +30,11 @@ public class MainSearch {
         HttpResponse<String> response = client
                 .send(request, HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.body());
+        String json = response.body();
+//        System.out.println(json);
 
+        Gson gson = new Gson();
+        Title title = gson.fromJson(json, Title.class);
+        System.out.println(title);
     }
 }
