@@ -1,11 +1,9 @@
 package br.com.firstProgramacao.watchOnline.models;
 
-import com.google.gson.annotations.SerializedName;
+import br.com.firstProgramacao.watchOnline.exception.InvalidYearException;
 
 public class Title implements Comparable<Title>{
-    @SerializedName("Title")
     public String name;
-    @SerializedName("Year")
     public int debutYear;
     public int duration;
     private int totalEvaluations;
@@ -21,6 +19,12 @@ public class Title implements Comparable<Title>{
 
     public Title(OmdbTitle omdbTitle) {
         this.name = omdbTitle.title();
+
+        if (omdbTitle.year().length() > 4) {
+            // EXCEÇÃO PERSONALIZADA
+            throw new InvalidYearException("Year is incorrect");
+        }
+
         this.debutYear = Integer.valueOf(omdbTitle.year());
         this.duration = Integer.valueOf(omdbTitle.year().substring(0,3));
     }
