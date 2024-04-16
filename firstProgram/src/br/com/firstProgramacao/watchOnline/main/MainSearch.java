@@ -1,7 +1,10 @@
 package br.com.firstProgramacao.watchOnline.main;
 
+import br.com.firstProgramacao.watchOnline.models.OmdbTitle;
 import br.com.firstProgramacao.watchOnline.models.Title;
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.net.URI;
@@ -33,8 +36,16 @@ public class MainSearch {
         String json = response.body();
 //        System.out.println(json);
 
-        Gson gson = new Gson();
-        Title title = gson.fromJson(json, Title.class);
+        // AQUI ESTÁ PEGANDO O PARÃO DE NOMENCÇATURA
+        // O JSON VEM EM UPPERCASE
+        // E VAI SE RESPONSABILIZAR POR IGNORAR
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .create();
+        OmdbTitle omdbTitle = gson.fromJson(json, OmdbTitle.class);
+//        System.out.println(omdbTitle);
+
+        Title title = new Title(omdbTitle);
         System.out.println(title);
     }
 }
