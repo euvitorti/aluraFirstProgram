@@ -7,6 +7,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpRequest;
@@ -47,9 +48,13 @@ public class MainSearch {
             OmdbTitle omdbTitle = gson.fromJson(json, OmdbTitle.class);
 //        System.out.println(omdbTitle);
 
-
             Title title = new Title(omdbTitle);
             System.out.println(title);
+
+            // ESCREVENDO EM UM ARQUIVO OS FILMES QUE FORAM PESQUISADOS
+            FileWriter fileWriter = new FileWriter("movie.txt");
+            fileWriter.write(title.toString());
+            fileWriter.close();
         } catch (NumberFormatException e) {
 
             System.out.println("ERROR");
