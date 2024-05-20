@@ -26,7 +26,7 @@ public class Title implements Comparable<Title>{
         }
 
         this.debutYear = Integer.valueOf(omdbTitle.year());
-        this.duration = Integer.valueOf(omdbTitle.year().substring(0,3));
+        this.duration = Integer.valueOf(omdbTitle.duration().substring(0,3));
     }
 
     public void showMovieInfo(){

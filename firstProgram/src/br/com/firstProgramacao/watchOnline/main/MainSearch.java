@@ -1,4 +1,4 @@
-package br.com.firstProgramacao.watchOnline.main;
+    package br.com.firstProgramacao.watchOnline.main;
 
 import br.com.firstProgramacao.watchOnline.exception.InvalidYearException;
 import br.com.firstProgramacao.watchOnline.models.OmdbTitle;
@@ -57,10 +57,8 @@ public class MainSearch {
                         .send(request, HttpResponse.BodyHandlers.ofString());
 
                 String json = response.body();
-//        System.out.println(json);
 
                 OmdbTitle omdbTitle = gson.fromJson(json, OmdbTitle.class);
-//        System.out.println(omdbTitle);
 
                 Title title = new Title(omdbTitle);
                 System.out.println(title);
